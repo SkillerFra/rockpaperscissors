@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="UTF-8"/>
+</head>
+<body>
+  <script>
+const computerChoice = [ 1, 2, 3];
+      //create function for computerchoice
+      function computerPlay(){
+         return Math.floor(Math.random() * computerChoice.length);
+     }
+
+      //create playerchoice
+      function playerPlay() {
+         return prompt("Rock, Paper , Scissors ?").toLowerCase();
+     }
+
+      //make const for gameoutcome
+      const computerSelection = computerPlay();
+      const playerSelection = playerPlay();
+
+      //function for one single round
+      function playRound(playerSelection, computerSelection) {
+         if (playerSelection === computerSelection) {
+             return "You had the same idea, Tie!";
+         } else if (playerSelection == "Rock" && computerSelection == "Scissors" || playerSelection == "Paper" && computerSelection == "Rock" || playerSelection == "Scissors" && computerSelection == "Paper" ) {
+             return "Nice, you won!";
+         } else if (playerSelection == "Rock" && computerSelection == "Paper" || playerSelection == "Paper" && computerSelection == "Scissors" || playerSelection == "Scissors" && computerSelection == "Rock" ) {
+             return "No, you lost!";
+         }
+     }
+
+
+  </script>
+</body>
+</html>
